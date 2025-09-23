@@ -1,0 +1,7 @@
+transformers
+datasets
+torch
+langchain
+faiss-cpu
+pypdf
+langchain-community
