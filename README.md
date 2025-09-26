@@ -19,7 +19,7 @@ Traditional information search works in a relatively simple way, by looking for 
    * If two vectors point in the same direction, the angle between them is 0°, and the cosine of 0° is 1. This means that the texts are very similar.
    * If the vectors are orthogonal (90° angle), the cosine is 0, indicating low or no similarity.
    * If they point in opposite directions (180° angle), the cosine is -1, indicating that they are opposite in meaning.
-   * The mathematical formula is `$$\text{similarity} = \cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \sqrt{\sum_{i=1}^{n} B_i^2}}$$`, where A and B are the embedding vectors. The programming libraries do this calculation.
+   * The mathematical formula is {$$\text{similarity} = \cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \sqrt{\sum_{i=1}^{n} B_i^2}}$$}, where A and B are the embedding vectors. The programming libraries do this calculation.
 
 ## RAG Architecture
 
