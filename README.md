@@ -45,10 +45,32 @@ To solidify the concepts learned through practical activities, the following Pyt
     * Uses `AutoModelForQuestionAnswering` to load the model.
     * Using `AutoTokenizer` to load the corresponding tokenizer.
     * A test function (`test_tokenizer`) demonstrates how text is converted to numeric IDs so the model can process it.
+    * ```bash
+      Starting tokenizer download for the model: 'pierreguillou/bert-base-cased-squad-v1.1-portuguese'...
+
+      Tokenizer successfully loaded.
+
+      Starting model download: 'pierreguillou/bert-base-cased-squad-v1.1-portuguese'...
+
+      Model successfully loaded.
+
+      Environment set and loading test finished.
+
+      --- Testing the Tokenizer ---
+
+      Original sentence: 'A UFRGS fica em Porto Alegre.'
+
+      Token IDs (input_ids): [101, 177, 9549, 22322, 17146, 1968, 173, 2268, 4844, 119, 102]
+
+      These are the numberes that the model really sees.
+      ```
 
 2. `explore_langchain.py`: This script introduces two of the main abstractions of the LangChain library, essential for building RAG pipelines. Loads a PDF document and splits it into smaller, overlapping pieces.
     * Loader: Uses PyPDFLoader to load the pages of a PDF file as Document objects.
     * Splitter: Uses the `RecursiveCharacterTextSplitter` to break documents into chunks of a defined size, maintaining an overlap to avoid losing context.
+    * ```bash
+      rgstdhf
+      ```
 
 3. `semantic_search.py`: This script demonstrates the concept of searching by similarity of meaning, rather than just keywords. Converts a list of sentences into numeric vectors (embeddings) and calculates the cosine similarity between all pairs of sentences.
     * Using the `sentence-transformers` library to load an embeddings model (`all-MiniLM-L6-v2`).
