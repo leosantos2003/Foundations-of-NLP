@@ -174,6 +174,11 @@ git clone https://github.com/leosantos2003/Foundations-of-NLP
 2. Create and activate a virtual environment:
 
 ```bash
+# Linux
+python3 -m venv .venv
+source ven/bin/activate
+
+# Windows
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
