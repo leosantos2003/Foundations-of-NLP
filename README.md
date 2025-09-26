@@ -120,6 +120,48 @@ To solidify the concepts learned through practical activities, the following Pyt
     * Using the `sentence-transformers` library to load an embeddings model (`all-MiniLM-L6-v2`).
     * Generating embedding tensors from text with the `model.encode()` method.
     * Calculation and analysis of a similarity matrix to find the most semantically related sentences.
+    * ```console
+      Model successfully loaded.
+
+      Generating embeddings for sentences...
+
+      Embeddings tensor format: torch.Size([6, 384])
+      Embeddings gerados.
+
+      Calculating the cosine similarity matrix...
+
+      --- Cosine Similarity Matrix ---
+
+      1.0000001192092896      0.28566789627075195     0.48072513937950134     0.704100489616394       0.2552812099456787      0.3252101540565491
+      0.28566789627075195     1.0000001192092896      0.41025662422180176     0.32074612379074097     0.42910951375961304     0.48023542761802673
+      0.48072513937950134     0.41025662422180176     1.0000001192092896      0.39394882321357727     0.3833175301551819      0.40890002250671387
+      0.704100489616394       0.32074612379074097     0.39394882321357727     1.000000238418579       0.28459349274635315     0.261221706867218
+      0.2552812099456787      0.42910951375961304     0.3833175301551819      0.28459349274635315     0.9999998807907104      0.5031449794769287
+      0.3252101540565491      0.48023542761802673     0.40890002250671387     0.261221706867218       0.5031449794769287      1.0000001192092896
+
+      --- Analysis of Most Similar Pairs ---
+
+      Similarity between 'A UFRGS é referência em Processamento de Linguagem Natural.' e 'A UFRGS é referência em Processamento de Linguagem Natural.': 1.0000
+
+      Similarity between 'A UFRGS é referência em Processamento de Linguagem Natural.' e 'Grandes modelos de linguagem precisam de bases de conhecimento externas.': 0.7041
+
+      Similarity between 'Pesquisas em PLN na universidade gaúcha têm destaque.' e 'Pesquisas em PLN na universidade gaúcha têm destaque.': 1.0000
+
+      Similarity between 'O chunking semântico é uma técnica avançada em RAG.' e 'O chunking semântico é uma técnica avançada em RAG.': 1.0000
+
+      Similarity between 'Grandes modelos de linguagem precisam de bases de conhecimento externas.' e 'A UFRGS é referência em Processamento de Linguagem Natural.': 0.7041
+
+      Similarity between 'Grandes modelos de linguagem precisam de bases de conhecimento externas.' e 'Grandes modelos de linguagem precisam de bases de conhecimento externas.': 1.0000
+
+      Similarity between 'O futebol é um esporte popular no Brasil.' e 'O futebol é um esporte popular no Brasil.': 1.0000
+
+      Similarity between 'O futebol é um esporte popular no Brasil.' e 'A avaliação de LLMs é um campo de estudo crítico.': 0.5031  
+
+      Similarity between 'A avaliação de LLMs é um campo de estudo crítico.' e 'O futebol é um esporte popular no Brasil.': 0.5031  
+
+      Similarity between 'A avaliação de LLMs é um campo de estudo crítico.' e 'A avaliação de LLMs é um campo de estudo crítico.': 1.0000
+      ```
+      * **Intersting detail about the results**: the similarity between the sentences `"A UFRGS é referência em Processamento de Linguagem Natural."` and `"Pesquisas em PLN na universidade gaúcha têm destaque."`           was very low. That is, firstly, because the all-MiniLM-L6-v2 model was primarily trained in English, having low understanding capacity of Portuguese. And secondly, the two senteces use very different             words that could represent more distant vectors in the vectorial space, even though they have similar meanings to the human comprehension.
 
 ## License
 
