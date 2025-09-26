@@ -171,20 +171,20 @@ To solidify the concepts learned through practical activities, the following Pyt
 git clone https://github.com/leosantos2003/Foundations-of-NLP
 ```
 
-3. Create and activate a virtual environment:
+2. Create and activate a virtual environment:
 
 ```bash
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-6. Install the dependencies:
+3. Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-8. Run the scripts:
+4. Run the scripts:
 
 ```bash
 python load_model.py
