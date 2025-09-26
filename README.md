@@ -39,6 +39,17 @@ Traditional information search works in a relatively simple way, by looking for 
 
 ## Enviroment and Development
 
+To solidify the concepts learned through practical activities, the following Python scripts were created.
+
+* `load_model.py`: This script focuses on the first steps to working with Hugging Face models. Download the pre-trained model `pierreguillou/bert-base-cased-squad-v1.1-portuguese`, which specializes in Question and Answer (QA) tasks in Portuguese.
+  * Uses `AutoModelForQuestionAnswering` to load the model.
+  * Using `AutoTokenizer` to load the corresponding tokenizer.
+  * A test function (`test_tokenizer`) demonstrates how text is converted to numeric IDs so the model can process it.
+
+* ``:
+
+* ``:
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
