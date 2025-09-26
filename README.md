@@ -161,7 +161,7 @@ To solidify the concepts learned through practical activities, the following Pyt
 
       Similarity between 'A avaliação de LLMs é um campo de estudo crítico.' e 'A avaliação de LLMs é um campo de estudo crítico.': 1.0000
       ```
-      * **Intersting detail about the results**: the similarity between the sentences `"A UFRGS é referência em Processamento de Linguagem Natural."` and `"Pesquisas em PLN na universidade gaúcha têm destaque."`           was very low. That is, firstly, because the all-MiniLM-L6-v2 model was primarily trained in English, having low understanding capacity of Portuguese. And secondly, the two senteces use very different             words that could represent more distant vectors in the vectorial space, even though they have similar meanings to the human comprehension.
+      * **Intersting detail about the results**: the similarity between the sentences `"A UFRGS é referência em Processamento de Linguagem Natural."` and `"Pesquisas em PLN na universidade gaúcha têm destaque."`           was very low. That is, firstly, because the `all-MiniLM-L6-v2` model was primarily trained in English, having low understanding capacity of Portuguese. And secondly, the two senteces use very different             words that could represent more distant vectors in the vectorial space, even though they have similar meanings to the human comprehension.
 
 ## License
 
