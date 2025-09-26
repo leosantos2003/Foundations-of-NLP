@@ -68,8 +68,52 @@ To solidify the concepts learned through practical activities, the following Pyt
 2. `explore_langchain.py`: This script introduces two of the main abstractions of the LangChain library, essential for building RAG pipelines. Loads a PDF document and splits it into smaller, overlapping pieces.
     * Loader: Uses PyPDFLoader to load the pages of a PDF file as Document objects.
     * Splitter: Uses the `RecursiveCharacterTextSplitter` to break documents into chunks of a defined size, maintaining an overlap to avoid losing context.
-    * ```bash
-      rgstdhf
+    * ```console
+      --- Phase 1: Using a 'Loader' ---
+
+      Loading the PDF document from: test_text.pdf
+
+      Document loaded. Number of pages ('Document' objects): 36
+
+      First page excerpt: 'From Wikipedia, the free encyclopedia
+      For other uses, see Aristotle (disambiguation).
+      Aristotle
+      Ἀριστοτέλης
+      Roman copy (in marble) of a Greek bronze bust of Aristotle by Lysippos (c. 330 BC), with mod...'
+
+      --- Phase 2: Using a 'Splitter' ---
+      Document split into chunks. Total number of generated chunks: 98
+
+      Below, the first generated chunk as example:
+      --------------------
+      From Wikipedia, the free encyclopedia
+      For other uses, see Aristotle (disambiguation).
+      Aristotle
+      Ἀριστοτέλης
+      Roman copy (in marble) of a Greek bronze bust of Aristotle by Lysippos (c. 330 BC), with modern
+      alabaster mantle
+      Born 384 BC
+      Stagira, Chalcidian League
+      Died 322 BC (aged 61–62)
+      Chalcis, Euboea, Macedonian Empire
+      Education
+      Education Platonic Academy
+      Philosophical work
+      Era Ancient Greek philosophy
+      Region Western philosophy
+      School Peripatetic school
+      Notable students Alexander the Great, Theophrastus, Aristoxenus
+      Main interests
+       Logic
+       Natural philosophy
+       Metaphysics
+       Ethics
+       Politics
+       Rhetoric
+       Poetics
+      Notable works  Organon
+       Physics
+      --------------------
       ```
 
 3. `semantic_search.py`: This script demonstrates the concept of searching by similarity of meaning, rather than just keywords. Converts a list of sentences into numeric vectors (embeddings) and calculates the cosine similarity between all pairs of sentences.
