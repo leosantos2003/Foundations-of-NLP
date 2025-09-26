@@ -45,7 +45,7 @@ To solidify the concepts learned through practical activities, the following Pyt
     * Uses `AutoModelForQuestionAnswering` to load the model.
     * Using `AutoTokenizer` to load the corresponding tokenizer.
     * A test function (`test_tokenizer`) demonstrates how text is converted to numeric IDs so the model can process it.
-    * ```bash
+    * ```console
       Starting tokenizer download for the model: 'pierreguillou/bert-base-cased-squad-v1.1-portuguese'...
 
       Tokenizer successfully loaded.
