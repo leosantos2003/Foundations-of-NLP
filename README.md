@@ -23,6 +23,20 @@ Traditional information search works in a relatively simple way, by looking for 
 
 ## RAG Architecture
 
+**Retrieval-Augmented Generation (RAG)** is a technique that enhances Large Language Models (LLMs) by connecting them to external, up-to-date knowledge sources. This allows LLMs to generate more accurate, detailed, and less "hallucinatory" responses because they don't rely solely on the data they were originally trained on.
+
+1. **Ingestion (Load)**: Loading raw data (e.g., PDFs).
+
+2. **Chunking (Split)**: Dividing long documents into smaller pieces called "chunks".
+
+3. **Embedding**: Converting each chunk of text into a numeric vector called "embedding".
+
+4. **Indexing (Store)**: Storage of embeddings in a vector database optimized for fast searches.
+
+5. **Retrieve**: Searches the vector database for the most relevant chunks for a given question.
+
+6. **Generate**: Sending the original question and the retrieved context to an LLM to formulate the answer.
+
 ## Enviroment and Development
 
 ## License
