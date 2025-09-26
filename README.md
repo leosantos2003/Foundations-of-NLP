@@ -42,18 +42,18 @@ Traditional information search works in a relatively simple way, by looking for 
 To solidify the concepts learned through practical activities, the following Python scripts were created.
 
 1. `load_model.py`: This script focuses on the first steps to working with Hugging Face models. Download the pre-trained model `pierreguillou/bert-base-cased-squad-v1.1-portuguese`, which specializes in Question and Answer (QA) tasks in Portuguese.
-  * Uses `AutoModelForQuestionAnswering` to load the model.
-  * Using `AutoTokenizer` to load the corresponding tokenizer.
-  * A test function (`test_tokenizer`) demonstrates how text is converted to numeric IDs so the model can process it.
+    * Uses `AutoModelForQuestionAnswering` to load the model.
+    * Using `AutoTokenizer` to load the corresponding tokenizer.
+    * A test function (`test_tokenizer`) demonstrates how text is converted to numeric IDs so the model can process it.
 
 2. `explore_langchain.py`: This script introduces two of the main abstractions of the LangChain library, essential for building RAG pipelines. Loads a PDF document and splits it into smaller, overlapping pieces.
-  * Loader: Uses PyPDFLoader to load the pages of a PDF file as Document objects.
-  * Splitter: Uses the `RecursiveCharacterTextSplitter` to break documents into chunks of a defined size, maintaining an overlap to avoid losing context.
+    * Loader: Uses PyPDFLoader to load the pages of a PDF file as Document objects.
+    * Splitter: Uses the `RecursiveCharacterTextSplitter` to break documents into chunks of a defined size, maintaining an overlap to avoid losing context.
 
 3. `semantic_search.py`: This script demonstrates the concept of searching by similarity of meaning, rather than just keywords. Converts a list of sentences into numeric vectors (embeddings) and calculates the cosine similarity between all pairs of sentences.
-  * Using the `sentence-transformers` library to load an embeddings model (`all-MiniLM-L6-v2`).
-  * Generating embedding tensors from text with the `model.encode()` method.
-  * Calculation and analysis of a similarity matrix to find the most semantically related sentences.
+    * Using the `sentence-transformers` library to load an embeddings model (`all-MiniLM-L6-v2`).
+    * Generating embedding tensors from text with the `model.encode()` method.
+    * Calculation and analysis of a similarity matrix to find the most semantically related sentences.
 
 ## License
 
