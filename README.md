@@ -163,6 +163,16 @@ To solidify the concepts learned through practical activities, the following Pyt
       ```
       * **Intersting detail about the results**: the similarity between the sentences `"A UFRGS é referência em Processamento de Linguagem Natural."` and `"Pesquisas em PLN na universidade gaúcha têm destaque."`           was very low. That is, firstly, because the `all-MiniLM-L6-v2` model was primarily trained in English, having low understanding capacity of Portuguese. And secondly, the two senteces use very different             words that could represent more distant vectors in the vectorial space, even though they have similar meanings to the human comprehension.
 
+## How to run the scripts
+
+1. Clone the repository: `git clone https://github.com/leosantos2003/Foundations-of-NLP`
+
+2. Create and activate a virtual environment: `py -3.11 -m venv .venv` and `.\.venv\Scripts\Activate.ps1`
+
+3. Install the dependencies: `pip install -r requirements.txt`
+
+4. Run the scripts: `python load_model.py`, `python explore_langchain.py` and `python semantic_search.py`
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
