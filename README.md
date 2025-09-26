@@ -165,13 +165,32 @@ To solidify the concepts learned through practical activities, the following Pyt
 
 ## How to run the scripts
 
-1. Clone the repository: `git clone https://github.com/leosantos2003/Foundations-of-NLP`
+1. Clone the repository:
 
-2. Create and activate a virtual environment: `py -3.11 -m venv .venv` and `.\.venv\Scripts\Activate.ps1`
+```bash
+git clone https://github.com/leosantos2003/Foundations-of-NLP
+```
 
-3. Install the dependencies: `pip install -r requirements.txt`
+3. Create and activate a virtual environment:
 
-4. Run the scripts: `python load_model.py`, `python explore_langchain.py` and `python semantic_search.py`
+```bash
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+6. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+8. Run the scripts:
+
+```bash
+python load_model.py
+python explore_langchain.py
+python semantic_search.py
+```
 
 ## License
 
